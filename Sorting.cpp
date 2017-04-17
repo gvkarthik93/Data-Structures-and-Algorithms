@@ -68,10 +68,10 @@ void selectionSort() {
     int arr[5] = {2,5,1,4,3};
     int n = sizeof(arr)/sizeof(arr[0]);
 
-    for (int i=0; i<n; i++)
+    for (int i=0; i<n-1; i++)
     {
         int min_index = i;
-        for (int j=i; j<n;j++)
+        for (int j=i+1; j<n;j++)
         {
             if (arr[min_index] > arr[j])
             {
