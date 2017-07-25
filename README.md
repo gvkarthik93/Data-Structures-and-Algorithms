@@ -2,9 +2,11 @@
 Data Structures and Algorithms in C++
 
 <p>Commands to run the programs:
-	<p>g++ --version (To check the g++ compiler version)</p>
-	<p>g++ filename.cpp (To compile and run the program in a cpp file)</p>
-	<p>./a.out (To check the output of the program)</p>
+	<ul>
+	<li>g++ --version (To check the g++ compiler version)</li>
+	<li>g++ filename.cpp (To compile and run the program in a cpp file)</li>
+	<li>./a.out (To check the output of the program)</li>
+	</ul>
 </p>
 Sorting.cpp
 	- Bubble Sort
