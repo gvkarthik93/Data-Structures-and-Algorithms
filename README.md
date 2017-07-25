@@ -1,4 +1,5 @@
-# DSA
+# Data Structures and Algorithms
+
 Data Structures and Algorithms in C++
 
 <p>Commands to run the programs:
@@ -8,8 +9,12 @@ Data Structures and Algorithms in C++
 	<li>./a.out (To check the output of the program)</li>
 	</ul>
 </p>
-Sorting.cpp
-	- Bubble Sort
-	- Modified Bubble Sort
-	- Selection Sort
-	- Insertion Sort
+
+<hr>
+<h3>Sorting.cpp</h3>
+<ol>
+	<li>Bubble Sort</li>
+	<li>Modified Bubble Sort</li>
+	<li>Selection Sort</li>
+	<li>Insertion Sort</li>
+</ol>
