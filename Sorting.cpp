@@ -10,16 +10,16 @@ int main() {
     bubbleSort();
     cout<<endl;
     modifiedBubbleSort();
-    //Modified bubble sort is better than bubble sort
     cout<<endl;
     selectionSort();
     cout<<endl;
     insertionSort();
     cout<<endl;
+    
     return 0;
 }
 
-//Code block for bubble sort
+// Code block for bubble sort
 void bubbleSort() {
     int arr[5] = {2,5,1,4,3};
     int n = sizeof(arr)/sizeof(arr[0]);
@@ -43,7 +43,8 @@ void bubbleSort() {
     }
 }
 
-//Code block for modified bubble sort
+// Code block for modified bubble sort
+// Modified bubble sort is better than bubble sort
 void modifiedBubbleSort() {
     int arr[5] = {2,5,1,4,3};
     int n = sizeof(arr)/sizeof(arr[0]);
@@ -70,7 +71,7 @@ void modifiedBubbleSort() {
     }
 }
 
-//Code block for selection sort
+// Code block for selection sort
 void selectionSort() {
     int arr[5] = {2,5,1,4,3};
     int n = sizeof(arr)/sizeof(arr[0]);
@@ -96,6 +97,7 @@ void selectionSort() {
     }
 }
 
+// Code block for insertion sort
 void insertionSort() {
     int arr[5] = {2,5,1,4,3};
     int n = sizeof(arr)/sizeof(arr[0]);
