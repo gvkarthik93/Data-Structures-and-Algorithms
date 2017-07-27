@@ -4,11 +4,57 @@ using namespace std;
 struct node {
 	int data;
 	node* next;
-};
+} *start;
 
 int listLength (node* head);
+void create(int data);
+void insertNode(int newdata, int position);
+void updateNode(node* head, int newdata, int position);
+void deleteNode(node* head, int newdata, int position);
+void displayList();
 
 int main() {
+	int choice;
+	int newdata, position;
+
+	start = NULL;
+
+	do {
+		cout<<endl<<"1. Create"<<endl<<"2. Insert"<<endl<<"3. Update"<<endl<<"4. Delete"<<endl<<"5. Display"<<endl<<"6. Exit"<<endl;
+		cout<<"Enter your option: ";
+		cin>>choice;
+		switch (choice) {
+			case 1: cout<<"Enter data: ";
+					cin>>newdata;
+					create(newdata);
+					displayList();
+					break;
+			case 2: cout<<"Enter data: ";
+					cin>>newdata;
+					cout<<"Enter position: ";
+					cin>>position;
+					insertNode(newdata, position);
+					displayList();
+					break;
+			case 3: cout<<"Enter data: ";
+					cin>>newdata;
+					cout<<"Enter position of Node to be updated: ";
+					cin>>position;
+					//updateNode(head, newdata, position);
+					displayList();
+					break;
+			case 4: cout<<"Enter position of node to be deleted: ";
+					cin>>position;
+					//deleteNode(head, newdata, position);
+					displayList();
+					break;
+			case 5: displayList();
+					break;
+			case 6: break;
+			default: displayList();
+					break;
+		}
+	} while (choice != 6);
 	return 0;
 }
 
@@ -20,10 +66,21 @@ int listLength (node* head) {
 		count++;
 		current = current->next;
 	}
+	return count;
+}
+
+void create(int newdata) {
+	node* temp;
+	temp = (node *)malloc(sizeof(node));
+	if (start == NULL) {
+		temp->data = newdata;
+		temp->next = NULL;
+		start = temp;
+	}
 }
 
 // Insert a node at any given position
-void insertNode(node* head, int newdata, int position) {
+void insertNode(int newdata, int position) {
 	int k = 1;
 	node *p, *q, *newnode;
 	
@@ -34,11 +91,11 @@ void insertNode(node* head, int newdata, int position) {
 	}
 
 	newnode->data = newdata;
-	p = head;
+	p = start;
 
 	if (position == 1) {
 		newnode->next = p;
-		head = newnode;
+		start = newnode;
 	}
 	else {
 		while (p!=NULL && k<position) {
@@ -49,4 +106,26 @@ void insertNode(node* head, int newdata, int position) {
 		q->next = newnode;
 		newnode->next = p;
 	}
+}
+
+void updateNode(node* head, int newdata, int position) {
+}
+
+void deleteNode(node* head, int newdata, int position) {
+}
+
+void displayList() {
+	node *p;
+	p = start;
+
+	if (p==NULL) {
+		cout<<endl<<"List is empty"<<endl;
+		return;
+	}
+
+	while(p!=NULL) {
+		cout<<p->data<<" ";
+		p = p->next;
+	}
+	cout<<endl;
 }
