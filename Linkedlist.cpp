@@ -40,4 +40,13 @@ void insertNode(node* head, int newdata, int position) {
 		newnode->next = p;
 		head = newnode;
 	}
+	else {
+		while (p!=NULL && k<position) {
+			k++;
+			q = p;
+			p = p->next;
+		}
+		q->next = newnode;
+		newnode->next = p;
+	}
 }
