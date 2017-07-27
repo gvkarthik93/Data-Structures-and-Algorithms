@@ -18,3 +18,12 @@ Data Structures and Algorithms in C++
 	<li>Selection Sort</li>
 	<li>Insertion Sort</li>
 </ol>
+
+<hr>
+<h3>Linkedlist.cpp</h3>
+<ul>
+	<li>Insert</li>
+	<li>Update</li>
+	<li>Delete</li>
+	<li>Display</li>
+</ul>
