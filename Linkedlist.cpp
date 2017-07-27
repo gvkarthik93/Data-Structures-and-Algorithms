@@ -9,8 +9,8 @@ struct node {
 int listLength (node* head);
 void create(int data);
 void insertNode(int newdata, int position);
-void updateNode(node* head, int newdata, int position);
-void deleteNode(node* head, int newdata, int position);
+void updateNode(int newdata, int position);
+void deleteNode(int newdata, int position);
 void displayList();
 
 int main() {
@@ -59,8 +59,8 @@ int main() {
 }
 
 // Calculating the length of the linked list
-int listLength (node* head) {
-	node* current = head;
+int listLength () {
+	node* current = start;
 	int count = 0;
 	while (current != NULL) {
 		count++;
@@ -108,10 +108,10 @@ void insertNode(int newdata, int position) {
 	}
 }
 
-void updateNode(node* head, int newdata, int position) {
+void updateNode(int newdata, int position) {
 }
 
-void deleteNode(node* head, int newdata, int position) {
+void deleteNode(int newdata, int position) {
 }
 
 void displayList() {
