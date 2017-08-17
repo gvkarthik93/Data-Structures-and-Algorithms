@@ -6,7 +6,7 @@ struct node {
 	node* next;
 } *start;
 
-int listLength (node* head);
+int listLength();
 void create(int data);
 void insertNode(int newdata, int position);
 void updateNode(int newdata, int position);
@@ -20,7 +20,7 @@ int main() {
 	start = NULL;
 
 	do {
-		cout<<endl<<"1. Create"<<endl<<"2. Insert"<<endl<<"3. Update"<<endl<<"4. Delete"<<endl<<"5. Display"<<endl<<"6. Exit"<<endl;
+		cout<<endl<<"1. Create"<<endl<<"2. Insert"<<endl<<"3. Update"<<endl<<"4. Delete"<<endl<<"5. Display"<<endl<<"6. List Length"<<endl<<"7. Exit"<<endl;
 		cout<<"Enter your option: ";
 		cin>>choice;
 		switch (choice) {
@@ -40,7 +40,7 @@ int main() {
 					cin>>newdata;
 					cout<<"Enter position of Node to be updated: ";
 					cin>>position;
-					//updateNode(head, newdata, position);
+					updateNode(newdata, position);
 					displayList();
 					break;
 			case 4: cout<<"Enter position of node to be deleted: ";
@@ -50,25 +50,29 @@ int main() {
 					break;
 			case 5: displayList();
 					break;
-			case 6: break;
+			case 6: listLength();
+					break;
+			case 7: break;
 			default: displayList();
 					break;
 		}
-	} while (choice != 6);
+	} while (choice != 7);
 	return 0;
 }
 
 // Calculating the length of the linked list
-int listLength () {
+int listLength() {
 	node* current = start;
 	int count = 0;
 	while (current != NULL) {
 		count++;
 		current = current->next;
 	}
+	cout<<endl<<"List Length: "<<count<<endl;
 	return count;
 }
 
+// Creating a new linked list. you could also create a linked list by using inset at position 1
 void create(int newdata) {
 	node* temp;
 	temp = (node *)malloc(sizeof(node));
@@ -108,9 +112,25 @@ void insertNode(int newdata, int position) {
 	}
 }
 
+// Code block to update node at a specific posiiton
 void updateNode(int newdata, int position) {
+	int k = 0;
+	node *p, *q;
+	p = start;
+	if (position > listLength()) {
+		cout<<endl<<"Node doesn't exist"<<endl;
+	}
+	else {
+		while (k != position) {
+			k++;
+			q = p;
+			p = p->next;
+		}
+		q->data = newdata;
+	}
 }
 
+// COde block for deleting a node at a specific position
 void deleteNode(int position) {
 	int k = 1;
 	node *p, *q;
@@ -141,6 +161,7 @@ void deleteNode(int position) {
 	}
 }
 
+// Code block to display the linked list
 void displayList() {
 	node *p;
 	p = start;
