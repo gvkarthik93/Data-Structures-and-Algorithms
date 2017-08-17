@@ -10,7 +10,7 @@ int listLength (node* head);
 void create(int data);
 void insertNode(int newdata, int position);
 void updateNode(int newdata, int position);
-void deleteNode(int newdata, int position);
+void deleteNode(int position);
 void displayList();
 
 int main() {
@@ -45,7 +45,7 @@ int main() {
 					break;
 			case 4: cout<<"Enter position of node to be deleted: ";
 					cin>>position;
-					//deleteNode(head, newdata, position);
+					deleteNode(position);
 					displayList();
 					break;
 			case 5: displayList();
@@ -111,7 +111,34 @@ void insertNode(int newdata, int position) {
 void updateNode(int newdata, int position) {
 }
 
-void deleteNode(int newdata, int position) {
+void deleteNode(int position) {
+	int k = 1;
+	node *p, *q;
+	if (start == NULL) {
+		cout<<endl<<"List is Empty"<<endl;
+		return;
+	}
+
+	p = start;
+	if (position == 1) {
+		start = start->next;
+		free(p);
+		return;
+	}
+	else {
+		while (p != NULL && k < position) {
+			k++;
+			q = p;
+			p = p->next;
+		}
+		if (p == NULL) {
+			cout<<endl<<"Position does not exist"<<endl;
+		}
+		else {
+			q->next = p->next;
+			free(p);
+		}
+	}
 }
 
 void displayList() {
