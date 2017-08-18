@@ -22,8 +22,18 @@ Data Structures and Algorithms in C++
 <hr>
 <h3>Linkedlist.cpp</h3>
 <ul>
+	<li>Create</li>
 	<li>Insert</li>
 	<li>Update</li>
 	<li>Delete</li>
+	<li>List Length</li>
+	<li>Display</li>
+</ul>
+
+<hr>
+<h3>Stack.cpp</h3>
+<ul>
+	<li>Push</li>
+	<li>Pop</li>
 	<li>Display</li>
 </ul>
