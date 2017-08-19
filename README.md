@@ -37,3 +37,11 @@ Data Structures and Algorithms in C++
 	<li>Pop</li>
 	<li>Display</li>
 </ul>
+
+<hr>
+<h3>Queue.cpp</h3>
+<ul>
+	<li>Push</li>
+	<li>Pop</li>
+	<li>Display</li>
+</ul>

@@ -9,7 +9,7 @@ void displayList();
 struct node {
 	int data;
 	node *next;
-}*start;
+}*start, *tail;
 
 int main() {
 	int choice;
@@ -53,11 +53,13 @@ void push(int newData){
 		p->data = newData;
 		p->next = NULL;
 		start = p;
+		tail = p;
 	}
 	else {
 		p->data = newData;
-		p->next = start;
-		start = p;
+		p->next = NULL;
+		tail->next = p;
+		tail = p;
 	}
 
 	displayList();
@@ -65,16 +67,17 @@ void push(int newData){
 
 void pop() {
 	node *p, *q;
+	p = start;
 	if (isEmpty()) {
 		cout<<endl<<"Stack is Empty"<<endl;
 		return;
 	}
 	else {
-		p = start;
-		start = start->next;
-		free(p);
-		displayList();
-	}
+			q = p->next;
+			start = q;
+			free(p);
+			displayList();
+		}
 }
 
 void displayList() {

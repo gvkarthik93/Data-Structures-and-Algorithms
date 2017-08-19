@@ -48,9 +48,10 @@ void bubbleSort() {
 void modifiedBubbleSort() {
     int arr[5] = {2,5,1,4,3};
     int n = sizeof(arr)/sizeof(arr[0]);
-    int flag = 0;
+    
     for(int i=0;i<n;i++)
     {
+        int flag = 0;
         for (int j=0;j<n-1;j++)
         {
             if (arr[j]>arr[j+1])
