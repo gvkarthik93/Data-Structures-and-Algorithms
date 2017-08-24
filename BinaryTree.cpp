@@ -3,6 +3,11 @@ using namespace std;
 
 // Binary tree works on O (logN) for insert/search/delete operations.
 
+// PreOrder - Parent, Left, Right
+// PostOrder - Left, Right, Parent
+// Inorder - Left, Parent, Right
+// LevelOrder - Binary Tree order (i, 2i+1, 2i+2)
+
 struct node {
 	int data;
 	node *left;
@@ -23,7 +28,7 @@ node* Insert(node* root,int data) {
 		root = GetNewNode(data);
 	}
 	// if data to be inserted is lesser, insert in left subtree. 
-	else if(data <= root->data) {
+	else if(data < root->data) {
 		root->left = Insert(root->left,data);
 	}
 	// else, insert in right subtree. 
