@@ -52,4 +52,13 @@ Data Structures and Algorithms in C++
 	<li>Create Tree</li>
 	<li>Search</li>
 	<li>Insert</li>
+	<li>Delete</li>
 </ul>
+
+<hr>
+<h3>Searching.cpp</h3>
+<ol>
+	<li>Linear Search</li>
+</ol>
+
+<hr>
