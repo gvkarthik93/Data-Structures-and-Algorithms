@@ -19,6 +19,7 @@ def computePatternList(pattern):
 def checkStringMatch(text, pattern):
 	la = computePatternList(pattern)
 	i,j = 0,0
+	checkList = []
 	while i<len(text) and j<len(pattern):
 		if text[i]==pattern[j]:
 			i+=1
@@ -28,12 +29,18 @@ def checkStringMatch(text, pattern):
 				j = la[j-1]
 			else:
 				i+=1
-	if j == len(pattern):
+		if j == len(pattern):
+			checkList.append(i-j)
+			j=0
+	print (checkList)
+	if len(checkList) > 0:
 		return True
+#	if j == len(pattern):
+#		return True
 	return False
 
 #print (computePatternList("aabaabaaa"))
 #print (computePatternList("abcaby"))
 #print (computePatternList("abcdabcy"))
 
-print (checkStringMatch("abcxabcdabcdabcy","abcdabcy"))
+print (checkStringMatch("abcxabcdabcdabcyabcxabcdabcdabcyabcxabcdabcdabcyabcxabcdabcdabcyabcxabcdabcdabcy","abcdabcy"))
