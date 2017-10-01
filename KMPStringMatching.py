@@ -43,4 +43,4 @@ def checkStringMatch(text, pattern):
 #print (computePatternList("abcaby"))
 #print (computePatternList("abcdabcy"))
 
-print (checkStringMatch("abcxabcdabcdabcyabcxabcdabcdabcyabcxabcdabcdabcyabcxabcdabcdabcyabcxabcdabcdabcy","abcdabcy"))
+print (checkStringMatch("abcdabcyabcdabcyabcdabcyabcxabcdabcdabcyabcxabcdabcdabcyabcxabcdabcdabcyabcxabcdabcdabcy","abcdabcy"))
