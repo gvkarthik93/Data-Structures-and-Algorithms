@@ -35,7 +35,6 @@ class Graph:
             # Dequeue a vertex from queue and print it
             s = queue.pop(0)
             print (s,)
- 
             # Get all adjacent vertices of the dequeued
             # vertex s. If a adjacent has not been visited,
             # then mark it visited and enqueue it
