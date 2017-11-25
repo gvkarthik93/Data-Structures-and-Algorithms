@@ -34,7 +34,7 @@ def printBoundaryLeft(root):
          
         elif(root.right):
             print (root.data,)
-            printBoundaryRight(root.right)
+            printBoundaryLeft(root.right)
          
         # do nothing if it is a leaf node, this way we
         # avoid duplicates in output
