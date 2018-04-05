@@ -8,7 +8,7 @@ def insert(word):
 	current = root
 	for i in range(len(word)):
 		ch = word[i]
-		node = current.get(ch, None)
+		node = current.children.get(ch, None)
 		if node is None:
 			node = Node()
 			current.children[ch] = node
@@ -19,7 +19,7 @@ def search(word):
 	current = root
 	for i in range(len(word)):
 		ch = word[i]
-		node = current.get(ch, None)
+		node = current.children.get(ch, None)
 		if not node:
 			return False
 		current = node
@@ -31,8 +31,8 @@ def delete(current, word, index):
 			return False
 		current.endOfWord = False
 		return len(current.children) == 0
-	ch = word(index)
-	node = currrent.children.get(ch, None)
+	ch = word[index]
+	node = current.children.get(ch, None)
 	if node is None:
 		return False
 	shouldDeleteCurrentNode = delete(node, word, index+1)
@@ -40,3 +40,9 @@ def delete(current, word, index):
 		del current.children[ch]
 		return len(current.children) == 0
 	return False
+
+root = Node()
+insert("HOLA")
+print (search("HOLA"))
+print (delete(root, "HOLAA", 0))
+print (search("HOLA"))
