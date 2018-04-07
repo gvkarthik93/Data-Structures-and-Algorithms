@@ -6,7 +6,6 @@ class Node:
 		self.h = None
 
 class AVLTree:
-
 	def setHeight(self,root):
 		return self.height(root)
 
