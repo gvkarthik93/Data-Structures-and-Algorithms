@@ -30,11 +30,11 @@ def postOrderIterative(root):
         # right child is not processed yet, then make sure
         # right child is processed before root
         if (root.right is not None and
-            peek(stack) == root.right):
+            root.right == peek(stack)):
             stack.pop() # Remove right child from stack 
             stack.append(root) # Push root back to stack
             root = root.right # change root so that the 
-                             # righ childis processed next
+                             # righ child is processed next
  
         # Else print root's data and set root as None
         else:
