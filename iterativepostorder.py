@@ -13,15 +13,14 @@ def postOrderIterative(root):
     stack = []
      
     while(True):
-         
         while (root):
-             # Push root's right child and then root to stack
-             if root.right is not None:
+            # Push root's right child and then root to stack
+            if root.right is not None:
                 stack.append(root.right)
-             stack.append(root)
+            stack.append(root)
  
              # Set root as root's left child
-             root = root.left
+            root = root.left
          
         # Pop an item from stack and set it as root
         root = stack.pop()
