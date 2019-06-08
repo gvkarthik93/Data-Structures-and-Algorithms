@@ -6,7 +6,7 @@ def traverse(root):
 
 	stack.append(root)
 
-	while stack:
+	while len(stack) > 0:
 		node = stack.pop()
 
 		print (node.data)

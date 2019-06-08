@@ -12,7 +12,7 @@ def postOrderIterative(root):
  
     stack = []
      
-    while(True):
+    while root is not None or len(stack) > 0:
         while (root):
             # Push root's right child and then root to stack
             if root.right is not None:
@@ -39,6 +39,3 @@ def postOrderIterative(root):
         else:
             ans.append(root.data) 
             root = None
- 
-        if (len(stack) <= 0):
-                break

@@ -4,15 +4,12 @@ def traverse(root):
 
 	current = root
 
-	while True:
+	while current is not None or len(stack)>0:
 		if current is not None:
 			stack.append(current)
 			current = current.left
 
 		else:
-			if len(stack) > 0:
-				current = stack.pop()
-				print (current.data)
-				current = current.right
-			else:
-				break
+			current = stack.pop()
+			print (current.data)
+			current = current.right
