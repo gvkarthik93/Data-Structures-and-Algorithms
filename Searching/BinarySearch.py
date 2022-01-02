@@ -16,4 +16,4 @@ def binary_search(array, target):
         elif target < val:
             upper = x
 
-print (binary_search(nums, 112))
+print (binary_search(nums, 89))
