@@ -9,7 +9,7 @@ class Node():
 def insert(temp,key):
 
     if not temp:
-        root = newNode(key)
+        root = Node(key)
         return
     q = []
     q.append(temp)
@@ -44,3 +44,4 @@ if __name__ == '__main__':
 
     key = 12
     insert(root, key)
+    print ("Insertion is complete")
